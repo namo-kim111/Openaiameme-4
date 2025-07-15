@@ -3,7 +3,7 @@ import openai
 
 # 🔑 API 클라이언트 구성 (Project + Organization 지정)
 client = openai.OpenAI(
-    api_key="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",
+    api_key="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",
     project="proj_oCt5LGaVEjXWxPyLLmUDL8yS",
     organization="org-5S9TCJj9up0nlCFz3G8ZlCP2"
 )
