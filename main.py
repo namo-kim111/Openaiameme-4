@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 # 🔑 구버전에서는 이렇게 직접 설정
-openai.api_key = "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"
+openai.api_key = "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"
 openai.organization = "org-5S9TCJj9up0nlCFz3G8ZlCP2"
 
 st.set_page_config(page_title="밈 설명기", layout="centered")
