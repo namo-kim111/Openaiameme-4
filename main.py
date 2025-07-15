@@ -1,9 +1,12 @@
 import streamlit as st
 import openai
 
-# 🔑 구버전에서는 이렇게 직접 설정
-openai.api_key = "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"
-openai.organization = "org-5S9TCJj9up0nlCFz3G8ZlCP2"
+# ✅ 최신 방식으로 클라이언트 객체 생성
+client = openai.OpenAI(
+    api_key="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",  # 너의 키
+    project="proj_oCt5LGaVEjXWxPyLLmUDL8yS",
+    organization="org-5S9TCJj9up0nlCFz3G8ZlCP2"
+)
 
 st.set_page_config(page_title="밈 설명기", layout="centered")
 st.title("🧠 오픈AI 밈 설명기")
