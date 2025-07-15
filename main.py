@@ -3,7 +3,7 @@ import openai
 
 # 🔑 API 키 직접 입력 (줄바꿈/공백 없이 정확히)
 client = openai.OpenAI(
-    api_key="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"
+    api_key="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"
 )
 
 st.set_page_config(page_title="밈 설명기", layout="centered")
