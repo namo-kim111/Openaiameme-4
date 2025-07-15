@@ -5,7 +5,7 @@ import openai
 
 # OpenAI 클라이언트 생성 (환경변수 없이 직접 입력)
 client = openai.OpenAI(api_key="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")
-st.write("openai version:", openai.__version__)
+st.title("OpenAI 밈 설명기")
 # 프롬프트 구성 함수
 def build_prompt(meme_name):
     return f"""
