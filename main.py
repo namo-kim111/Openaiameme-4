@@ -2,9 +2,7 @@ import streamlit as st
 import openai
 
 # 🔑 API 키 직접 입력 (줄바꿈/공백 없이 정확히)
-client = openai.OpenAI(
-    api_key="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"
-)
+client = openai.OpenAI(api_key="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")
 
 st.set_page_config(page_title="밈 설명기", layout="centered")
 st.title("🧠 오픈AI 밈 설명기")
