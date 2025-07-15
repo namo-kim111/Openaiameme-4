@@ -1,16 +1,21 @@
 import streamlit as st
 import openai
 
-# 🔑 API 키 직접 입력 (줄바꿈/공백 없이 정확히)
-client = openai.OpenAI(api_key="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")
+# 🔑 API 클라이언트 구성 (Project + Organization 지정)
+client = openai.OpenAI(
+    api_key="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",
+    project="proj_oCt5LGaVEjXWxPyLLmUDL8yS",
+    organization="org-5S9TCJj9up0nlCFz3G8ZlCP2"
+)
 
+# ✅ 앱 구성
 st.set_page_config(page_title="밈 설명기", layout="centered")
 st.title("🧠 오픈AI 밈 설명기")
 
 # 📥 사용자 입력
 meme_input = st.text_input("궁금한 밈의 이름을 입력하세요:")
 
-# 🛠 프롬프트 구성
+# 🛠 프롬프트 구성 함수
 def build_prompt(meme_name):
     return f"""
 너는 인터넷 밈 전문가야. '{meme_name}'이라는 밈을 아래 세 가지 항목으로 한국어로 간단히 설명해줘:
@@ -34,7 +39,7 @@ def query_gpt(prompt):
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
-        return f"[에러 발생] {e}"
+        return f"❌ 오류 발생: {e}"
 
 # ▶️ 실행 버튼
 if st.button("밈 설명 요청") and meme_input:
@@ -43,5 +48,5 @@ if st.button("밈 설명 요청") and meme_input:
     st.markdown("### 📘 설명 결과")
     st.write(result)
 
-# 버전 확인 (문제 해결용)
+# 🛠 버전 출력 (디버깅용)
 st.write("🔧 openai 버전:", openai.__version__)
