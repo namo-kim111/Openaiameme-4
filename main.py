@@ -42,3 +42,4 @@ if st.button("밈 설명 요청") and meme_input:
     result = query_gpt(prompt)
     st.markdown("### 📘 설명 결과")
     st.write(result)
+    st.write("🧪 OpenAI 라이브러리 버전:", openai.__version__)
