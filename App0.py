@@ -4,8 +4,8 @@ import streamlit as st
 import openai
 
 # OpenAI 클라이언트 생성 (환경변수 없이 직접 입력)
-client = openai.OpenAI(api_key="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")
-
+client = openai.OpenAI(api_key="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")
+st.write("openai version:", openai.__version__)
 # 프롬프트 구성 함수
 def build_prompt(meme_name):
     return f"""
